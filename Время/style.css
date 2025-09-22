@@ -1,4 +1,4 @@
-#circle{
+.circle{
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -17,4 +17,9 @@
 }
 .movedown{
     bottom: -500px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
