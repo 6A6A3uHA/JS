@@ -1,18 +1,7 @@
-/* :root{
-    --color: red;
-} */
-
 :root{
     --position: 0px;
 }
 
-/* .circle{
-    height: 100px;
-    width: 100px;
-    border: 1px solid orange;
-    border-radius: 100%;
-    background-color: var(--color);
-} */
 .slider{
     width: 100%;
     display: flex;
