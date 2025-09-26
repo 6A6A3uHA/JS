@@ -4,6 +4,7 @@
 }
 body{
     background-color: rgb(20, 20, 20);
+    color: whitesmoke;
 }
 
 .slider{
@@ -11,6 +12,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto auto 50px auto;
 }
  .slides{
     display: flex;
@@ -42,6 +44,7 @@ body{
     background-color: blueviolet;
     color: whitesmoke;
     font-size: 40px;
+    border-radius: 15px;
 }
 .red{
     color: red;
@@ -49,4 +52,35 @@ body{
 
 .green{
     color: lightgreen;
+}
+.yellow{
+    color: yellow;
+}
+
+.inp{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#inp{
+    margin: 20px;
+    width: 100px;
+    height: 20px;
+}
+
+#binp{
+    margin: 20px;
+    width: 150px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: blueviolet;
+}
+#res{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

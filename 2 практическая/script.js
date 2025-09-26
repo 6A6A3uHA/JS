@@ -1,11 +1,16 @@
 const btnl = document.getElementById('btnleft')
 const btnr = document.getElementById('btnright')
 const btna = document.getElementById('btnauto')
+const binp = document.getElementById('binp')
 const range = document.getElementById('1').children.length //достаем количество дочерних элементов блока slides
+const resauto = document.getElementById('btnd')
+const inp = document.getElementById('inp')
+const res = document.getElementById('res')
 let a = 0
 let img = []
 let flag = true
-let flagb = false
+let flagb = true
+let flagside = false
 console.log(range);
 for (let index = 0; index < range; index++) {
     img.push(index)   
@@ -30,11 +35,7 @@ function slidel() {
         else{
             a--
             a%=img.length
-            document.documentElement.style.setProperty('--position', img[a]*-1220+'px')}}
-        
-    
-    
-}
+            document.documentElement.style.setProperty('--position', img[a]*-1220+'px')}}}
 
 function slider() {
     if (flag) {
@@ -64,22 +65,53 @@ autoslide = setInterval(() => {
 
 function auto() {
     if (flagb) {
-        flagb = false
-        btna.classList.toggle('red')
-        btna.classList.toggle('green')
-        autoslide = setInterval(() => {
-    slider()
-}, 3000);
+        if (flagside) {
+            btna.classList.toggle('red')
+            btna.classList.toggle('green')
+            autoslide = setInterval(() => {
+                slider()}, 3000);
+            flagside = false}
+        else{
+            btna.classList.toggle('green')
+            btna.classList.toggle('yellow')
+            clearInterval(autoslide)
+            setTimeout(() => {
+                autoslide = setInterval(() => {
+                slidel()}, 3000);
+            }, 1);
+            flagb = false
+            flagside = true}
     }
     else{
+        flagside = true
         flagb = true
         btna.classList.toggle('red')
-        btna.classList.toggle('green')
+        btna.classList.toggle('yellow')
         clearInterval(autoslide)
     }
 }
 
+function check_param() {
+    res.innerHTML = ""
+    if (isNaN(inp.value) || inp.value.trim() == "" || Number.isNaN(Number(inp.value))) {
+        res.innerHTML = `<p>Что-то не число</p>`
+        inp.value = ''
+    }
+    else{
+        b=Number(inp.value)
+        if (b>range-1 || b <= 0) {
+            res.innerHTML = `<p>Фотографии на такой позиции нет</p>`
+            inp.value = ''
+        }
+        else{
+            document.documentElement.style.setProperty('--position', img[b-1]*-1220+'px')
+            a = b-1
+            inp.value = ''
+        }
+    }
+}
 
+binp.addEventListener('click', check_param)
 btnl.addEventListener('click', slidel)
 btna.addEventListener('click', auto)
 btnr.addEventListener('click', slider)
