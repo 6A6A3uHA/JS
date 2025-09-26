@@ -1,0 +1,44 @@
+#box{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: darkgray;
+}
+
+.inp{
+    border-radius: 7px;
+    box-shadow: 3px 3px;
+    margin: 20px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+}
+
+#btn{
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#res{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+}
+
+.false{
+    background-color: red;
+}
+.true{
+    background-color: lightgreen;
+}
+
+#reset{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
