@@ -1,0 +1,29 @@
+div{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 20px;
+    align-items: center;
+}
+#block{
+    background-color: rgba(255, 255, 0, 0.781);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#res{
+    border-radius: 7px;
+    box-shadow: 3px 3px;
+}
+#inp1, #inp2{
+    margin: 10px;
+    border-radius: 5px;
+}
+.true{
+    background-color: green;
+}
+.err{
+    background-color: red;
+}
+.tr{
+    transition: 1s;
+}
