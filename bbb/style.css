@@ -1,4 +1,12 @@
-.line{
+/* .line{
     display: flex;
     flex-flow: row nowrap;
+} */
+
+.hide{
+    display: none;
+}
+
+.look{
+    display: flex;
 }
