@@ -1,0 +1,12 @@
+
+.err{
+    /* display: none; */
+    transition: 1s;
+    color: red;
+    height: 0;
+    overflow: hidden;
+}
+
+.show{
+    height: 20px;
+}
