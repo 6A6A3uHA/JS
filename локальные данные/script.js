@@ -33,3 +33,8 @@ else
 
 btns.addEventListener('click', save)
 btne.addEventListener('click', erase)
+inp.addEventListener('keydown(enter)', save)
+
+
+// let a = '[1,2,3,4,5]'
+// console.log(JSON.parse(a));
