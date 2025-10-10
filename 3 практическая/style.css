@@ -1,0 +1,47 @@
+.site{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.hide{
+    display: none;
+}
+
+.look{
+    display: flex;
+    flex-flow: column;
+}
+
+.form{
+    max-width: 500px;
+}
+
+.row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.err{
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+    color: red;
+    height: 0;
+    overflow: hidden;
+    align-items: center;
+}
+
+.showup{
+    height: 20px;
+    border: 3px solid red;
+    border-top: 0px;
+}
+.showleft{
+    height: 60px;
+    border: 3px solid red;
+    border-left: 0;
+}

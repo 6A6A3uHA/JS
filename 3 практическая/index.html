@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site">
+
+        <div class="button">
+            <button>Тест</button>
+            <button>Прошлые попытки</button>
+        </div>
+
+        <div class="hide look">
+            <h1>Тест по математике</h1>
+
+            <div class="form">
+                <form name="form" novalidate>
+                    <h2>Введите свои данные</h2>
+
+                    <div class="row">
+                        <p>Введите Имя: </p>
+
+                        <div>
+                            <input type="text" name="name" minlength="2" maxlength="10" pattern="/^[А-Я][а-я]{1,}/" placeholder="Имя" required>
+                            <div class="err">Не верно введено имя</div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="row">
+                        <p>Ваша дата рождения: </p>
+                        <div>
+                            <input type="text" name="date" pattern="/(0[1-9]|[1-2][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19[0-9][0-9]|20[01][0-9]|202[0-5])/" placeholder="dd.mm.yyyy">
+                            <div class="err">Не верно введена дата</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>Ваш пол:</p>
+
+                        <label for="">
+                            <div class="row">
+                                <ul> 
+                                    <li><input type="radio" name="sex" value="0" checked>Не выбрано</li>
+                                    <li><input type="radio" name="sex" value="1">Мужской</li>
+                                    <li><input type="radio" name="sex" value="2">Женский</li>
+                                </ul>
+                                <div class="err showleft">Не выбран пол</div>
+                            </div>
+                        </label>
+
+                        <input type="submit" value="submit">
+
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
