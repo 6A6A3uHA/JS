@@ -13,12 +13,14 @@
     <div class="site">
         <div class="fixedcontent">
             <div class="button">
-                <button>Тест</button>
-                <button>Прошлые попытки</button>
+                <button class="nologin hide">Тест</button>
+                <button class="nologin hide">Прошлые попытки</button>
+                <button>Таблица лидеров</button>
             </div>
 
-            <div id="account">
-                <button>Выйти из аккаунта</button>
+            <div class="account">
+                <div class="nologin hide" id="account"></div>
+                <button class="nologin hide" id="logout">Выйти из аккаунта</button>
             </div>
         </div>
 
@@ -26,8 +28,8 @@
 
 
 
-        <div class=" hide look" id="reg">
-            <h1>Тест по математике</h1>
+        <div class="hide look" id="reg">
+            
 
             <div class="form">
                 <form name="form_account" novalidate>
@@ -51,23 +53,23 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="row">
                         <p>Ваш пол:</p>
 
-                        <label>
-                            <div class="row">
+                        <div>
+                            <div>
                                 <ul>
                                     <li><input type="radio" name="sex" value="0" checked>Не выбрано</li>
-                                    <li><input type="radio" name="sex" value="1">Мужской</li>
-                                    <li><input type="radio" name="sex" value="2">Женский</li>
+                                    <li><input type="radio" name="sex" value="Мужской">Мужской</li>
+                                    <li><input type="radio" name="sex" value="Женский">Женский</li>
                                 </ul>
-                                <div class="err">Не выбран пол</div>
+                                
                             </div>
-                        </label>
-
+                        </div>
+                        <div class="err">Не выбран пол</div>
                     </div>
 
-                    <input type="submit" value="Регистрация">
+                    <div class="center"><input type="submit" value="Регистрация"></div>
 
                 </form>
             </div>
@@ -75,108 +77,16 @@
         </div>
 
 
-        <div class="hide look" id="test">
-            <div class="form">
-                <form name="test">
-                    <label class="quest">
-                        <p>Чему равна сумма 3-х углов треугольника:</p>
-                        <ul>
-                            <li><input type="radio" name="degree" checked>90°</li>
-                            <li><input type="radio" name="degree">180°</li>
-                            <li><input type="radio" name="degree">360°</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Выберите правильный порядок математических действий:</p>
-                        <ul>
-                            <li><input type="radio" name="order_operations" checked>Сначала выполняется умножение и
-                                деление, затем сложение и вычитание</li>
-                            <li><input type="radio" name="order_operations">Сначала выполняется сложение и
-                                вычитание,
-                                затем умножение и деление</li>
-                            <li><input type="radio" name="order_operations">Все действия выполняются по порядку
-                                слева
-                                направо, независимо от стоящих знаков</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Как называются два треугольника с равными углами и пропорциональными сторонами:</p>
-                        <ul>
-                            <li><input type="radio" name="similar" checked>Равносторонние</li>
-                            <li><input type="radio" name="similar">Подобные</li>
-                            <li><input type="radio" name="similar">Правильные</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Что такое теорема:</p>
-                        <ul>
-                            <li><input type="radio" name="theorem" checked>Математическое утверждение, истинность
-                                которого установлена путём доказательства</li>
-                            <li><input type="radio" name="theorem">Исходное положение какой-либо теории, принимаемое
-                                в
-                                рамках данной теории истинным без требования доказательства</li>
-                            <li><input type="radio" name="theorem">Предположение или догадка, которая требует
-                                доказательства</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>С каких двух чисел начинаются Числа Фибоначчи:</p>
-                        <ul>
-                            <li><input type="radio" name="Fibonacchi" checked>0 и 1</li>
-                            <li><input type="radio" name="Fibonacchi">1 и 3</li>
-                            <li><input type="radio" name="Fibonacchi">0 и 2</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Округлите десятичную дробь 3,65478 до сотых чисел:</p>
-                        <ul>
-                            <li><input type="radio" name="rounding" checked>3,66</li>
-                            <li><input type="radio" name="rounding">3,65</li>
-                            <li><input type="radio" name="rounding">3,7</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Ось координат, которая проводится горизонтально, называется:</p>
-                        <ul>
-                            <li><input type="radio" name="coordinates" checked>Ось абсцисс</li>
-                            <li><input type="radio" name="coordinates">Ось ординат</li>
-                            <li><input type="radio" name="coordinates">Ось аппликат</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Чему равен квадратный корень числа 484:</p>
-                        <ul>
-                            <li><input type="radio" name="root" checked>22</li>
-                            <li><input type="radio" name="root">24</li>
-                            <li><input type="radio" name="root">42</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Чему равен модуль числа -7,8</p>
-                        <ul>
-                            <li><input type="radio" name="module" checked>-7,8</li>
-                            <li><input type="radio" name="module">7,8</li>
-                            <li><input type="radio" name="module">8,7</li>
-                        </ul>
-                    </label>
-                    <label class="quest">
-                        <p>Чтобы найти длину гипотенузы прямоугольного треугольника, нужно применить теорему:</p>
-                        <ul>
-                            <li><input type="radio" name="Pythagoras" checked>Декарта</li>
-                            <li><input type="radio" name="Pythagoras">Пифагора</li>
-                            <li><input type="radio" name="Pythagoras">Пуанкаре</li>
-                        </ul>
-                    </label>
-
-                    <input type="submit" value="Сдать">
-                </form>
-            </div>
+        <div class="hide" id="test">
+            
         </div>
 
-        <div class="hide look" id="result">
+        <div class="hide" id="result">
 
         </div>
 
+
+        <div class="delete"><button id="delete">Очистить данные</button></div>
     </div>
     <script src="script.js"></script>
 </body>
