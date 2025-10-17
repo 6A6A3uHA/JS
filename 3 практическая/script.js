@@ -12,9 +12,7 @@ const unreg = document.getElementById("logout")
 const test_or_result = {"inp":`input type="radio"`, "p":`p`}
 const end_p = {"inp": "", "p":`</p>`}
 let form_test = document
-let user_rezult = {}
 let list_rezult = {}
-let list_account_rezult = []
 let account = {}
 let stroka = ""
 let session = 0
@@ -165,8 +163,7 @@ function login() {
                 do {
                     if (localStorage.getItem(`session${b}`) == JSON.stringify(account)) {
                         session = `session${b}`
-                        break
-                    } 
+                        break} 
                     b++
                 }while (localStorage.getItem(`session${b}`) !== null)
                 console.log(session);
